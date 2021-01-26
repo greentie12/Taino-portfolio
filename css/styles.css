@@ -5,12 +5,11 @@
   --primary-light: #63b3db;
   --secondary-color: #e6652e;
   --secondary-light: #fba37e;
-  --green-color: #49c562;
   --award-color: #ffb327;
   --light-gray-color: #cecece;
   --light-color: #eeeeee;
   --dark-color: #252525;
-  --max-width: 1100px;
+  --max-width: 1200px;
 }
 
 * {
@@ -127,7 +126,7 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.7;
+  opacity: 0.6;
 }
 
 #showcase .container {
@@ -146,17 +145,12 @@ button {
 }
 
 .showcase-content h1 {
-  /* background: rgba(97, 97, 97, 0.3); */
-  /* border-radius: 5px;
-  padding: 0.5rem;*/
   display: inline-block;
   margin-bottom: 1rem;
 }
 
 .showcase-content p {
-  /* background: rgba(26, 26, 26, 0.7); */
-  /* border-radius: 5px;
-  padding: 0.5rem; */
+  width: 450px;
 }
 
 #home-articles {
@@ -186,6 +180,7 @@ button {
   border-radius: 5px;
   filter: grayscale(100%);
   transition: all 0.5s ease-in;
+  cursor: pointer;
 }
 
 .card img:hover {
@@ -219,6 +214,7 @@ button {
 .specialization div {
   border-radius: 5px;
   padding: 0.5rem 1rem;
+  cursor: pointer;
 }
 
 .specialization div:nth-child(odd) {
@@ -241,9 +237,9 @@ button {
 
 /* experience section */
 #experience {
-  height: 50vh;
   display: flex;
   align-items: center;
+  margin-top: 6rem;
 }
 
 .about-me {
@@ -280,10 +276,15 @@ button {
 #experience .bio h4 {
   text-align: center;
   margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+#experience .bullet-points ul li {
+  font-size: 1.2rem;
 }
 
 .about-info h3 {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 #experience .award-1 {
@@ -432,7 +433,7 @@ button {
 }
 
 .bottom-footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
 }
@@ -445,7 +446,7 @@ button {
 
 .footer-content p {
   align-self: center;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 .social {
@@ -468,4 +469,142 @@ button {
   background-color: var(--secondary-light);
   color: var(--dark-color);
   transform: scale(1.3);
+}
+
+@media (max-width: 900px) {
+  #showcase .container {
+    height: 70vh;
+  }
+
+  .showcase-content {
+    width: 90%;
+    position: absolute;
+    bottom: 5px;
+    left: 20px;
+  }
+
+  .showcase-content p {
+    font-size: 1.1rem;
+    width: 90%;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .specialization {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .specialization div {
+    padding: 1rem;
+  }
+
+  #experience {
+    margin: 2rem 0;
+  }
+
+  .about-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .about-info h3 {
+    font-size: 1.4rem;
+  }
+
+  #experience .award-1 p,
+  #experience .award-2 p,
+  #experience .award-3 p {
+    text-align: center;
+    font-size: 1.1rem;
+  }
+
+  #contact {
+    height: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .contact-intro {
+    margin: 2rem 0 1rem 0;
+  }
+
+  #contact .text-fields {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #contact .text-fields input,
+  #contact .message-input {
+    width: 75%;
+    font-size: 1.1rem;
+  }
+
+  #contact .text-input::placeholder {
+    font-size: 1rem;
+  }
+
+  #contact .message-input {
+    height: 6rem;
+    font-size: 1.6rem;
+  }
+
+  .contact-info {
+    height: 100%;
+    padding-bottom: 2rem;
+  }
+
+  .contact-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .grid-item {
+    width: 90%;
+  }
+
+  .grid-item h4 {
+    font-size: 1.5rem;
+  }
+
+  .grid-item a,
+  .grid-item p {
+    font-size: 1.2rem;
+  }
+
+  .main-footer {
+    position: relative;
+    height: 7rem;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-content p {
+    margin-top: 0.5rem;
+  }
+
+  .main-footer .social {
+    padding-top: 1rem;
+  }
+
+  .main-footer .social i {
+    font-size: 1.5rem;
+  }
 }
