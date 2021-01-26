@@ -457,6 +457,7 @@ button {
 }
 
 .social i {
+  font-size: 1.1rem;
   border: 1px solid #ffffff;
   border-radius: 50%;
   padding: 0.8rem;
